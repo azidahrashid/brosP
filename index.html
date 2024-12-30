@@ -68,7 +68,32 @@
 								<li data-menuanchor="page2" class="t5 _side-nav">
 									<a class="waves-effect waves-light" href="#page2" tab="5"><i class="fi fi-ss-asterik"></i> Premium Games</a>
                                 </li>
+
+
+
+
+
+                                
                             </ul>
+
+
+                            <ul id="menu" class="LEFT_side-nav dropdown-menu" aria-labelledby="mainDropdown">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle title_side" href="#">PRODUCT</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu 1 Item 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu 1 Item 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu 2 Item 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Submenu 2 Item 2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
 							
 							<ul id="menu" class="LEFT_side-nav">
 								<h2 class="title_side dropmenu  ">COMPANY</h2>
@@ -1911,42 +1936,29 @@
                         });
 
 
-                        document.addEventListener("DOMContentLoaded", function () {
-    const titleSide = document.querySelector(".title_side.dropmenu");
-    const menu = document.getElementById("menu");
-    const menuItems = menu.querySelectorAll(".t1._side-nav, .t3._side-nav, .t4._side-nav, .t5._side-nav");
+                        $(document).ready(function () {
+                            // Enable dropdown submenus to be toggled on click
+                            $('.dropdown-submenu a.dropdown-toggle').on("click", function(e) {
+                                e.preventDefault();
+                                e.stopPropagation();
 
-    if (titleSide) {
-        // Click event for the title to toggle menu visibility
-        titleSide.addEventListener("click", function (event) {
-            event.stopPropagation(); // Prevent the event from bubbling up
+                                var $subMenu = $(this).next('.dropdown-menu');
+                                var $parentMenu = $(this).parents('.dropdown-menu').first();
 
-            // Remove active class from all menu items first
-            menuItems.forEach(item => item.classList.remove("active"));
+                                // Hide any open submenus
+                                $parentMenu.find('.dropdown-menu').not($subMenu).removeClass('show');
 
-            // Toggle the active state for the current menu
-            let current = titleSide.nextElementSibling;
-            while (current && current.matches("li._side-nav")) {
-                current.classList.toggle("active");
-                current = current.nextElementSibling;
-            }
-        });
-    }
+                                // Toggle the submenu
+                                $subMenu.toggleClass('show');
+                            });
 
-    // Click event on the document to remove active classes when clicking outside
-    document.addEventListener("click", function (event) {
-        if (!menu.contains(event.target)) {
-            menuItems.forEach(item => item.classList.remove("active"));
-        }
-    });
-
-    // Optional: Remove active class when clicking another menu item
-    menuItems.forEach(item => {
-        item.addEventListener("click", function () {
-            menuItems.forEach(i => i.classList.remove("active")); // Hide all menu items
-        });
-    });
-});
+                            // Close all dropdowns when clicking outside
+                            $(document).on('click', function (e) {
+                                if (!$(e.target).closest('.dropdown').length) {
+                                    $('.dropdown-menu.show').removeClass('show');
+                                }
+                            });
+                        });
 
 
 
