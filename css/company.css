@@ -2771,6 +2771,13 @@ height: 100vh;
     display: block;
 }
 
+.brand-logo-CENTER {
+    margin: 0 auto;
+}
+
+.brand-logo-CENTER.design-font {
+    font-size: 35px;
+}
 	
 }
 
