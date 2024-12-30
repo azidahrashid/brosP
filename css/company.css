@@ -3140,30 +3140,42 @@ ul.your-list.pricingpage {
 }
 
 
+
 /* General styles for the main dropdown */
 .dropdown {
     position: relative;
+    display: inline-block;
 }
 
-.dropdown .btn {
+.dropdown > button {
     font-size: 1rem;
     font-weight: bold;
     padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
     border-radius: 0.25rem;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dropdown > button:hover {
+    background-color: #0056b3;
 }
 
 /* Main dropdown menu */
 .LEFT_side-nav.dropdown-menu {
     display: none; /* Hidden by default */
     position: absolute;
+    top: 100%; /* Position below the button */
+    left: 0;
     z-index: 1000;
     min-width: 12rem;
     padding: 0.5rem 0;
     background-color: #fff;
-    background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+    list-style: none;
 }
 
 .LEFT_side-nav.dropdown-menu.show {
@@ -3180,6 +3192,17 @@ ul.your-list.pricingpage {
     justify-content: space-between;
     align-items: center;
     font-weight: 500;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: #212529;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+}
+
+.dropdown-submenu > .dropdown-item:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 0.25rem;
 }
 
 .dropdown-submenu > .dropdown-item::after {
@@ -3190,16 +3213,17 @@ ul.your-list.pricingpage {
 
 /* Submenu dropdowns */
 .dropdown-submenu .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
     top: 0;
     left: 100%; /* Position to the right of the parent menu */
-    margin-top: -0.125rem;
-    margin-left: 0;
     min-width: 10rem;
+    padding: 0.5rem 0;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
-    display: none; /* Hide by default */
+    list-style: none;
     opacity: 0;
     transform: scale(0.95);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -3219,6 +3243,7 @@ ul.your-list.pricingpage {
     display: block;
     font-size: 0.9rem;
     font-weight: 400;
+    background-color: transparent;
 }
 
 .dropdown-menu a:hover {
@@ -3227,13 +3252,7 @@ ul.your-list.pricingpage {
     border-radius: 0.25rem;
 }
 
-/* Hover effect for dropdown submenu toggle */
-.dropdown-submenu > .dropdown-item:hover {
-    background-color: rgba(0, 123, 255, 0.1);
-    border-radius: 0.25rem;
-}
-
-/* Focus and active state for better accessibility */
+/* Accessibility: Focus and active states */
 .dropdown-menu a:focus,
 .dropdown-menu a.active {
     background-color: #0056b3;
@@ -3241,7 +3260,7 @@ ul.your-list.pricingpage {
     outline: none;
 }
 
-/* Adjust submenu for better responsiveness */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .dropdown-submenu .dropdown-menu {
         left: auto;
