@@ -2758,7 +2758,9 @@ height: 100vh;
     font-size: 20px;
 
 }
-
+.rtl-dir_center {
+    justify-content: right;
+}
 	
 }
 
