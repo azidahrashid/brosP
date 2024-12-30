@@ -90,19 +90,19 @@ html {
 }
 
 .bg-img-1 {
-	background-image: url(../img/main/main_bg01.jpg);
+	/* background-image: url(../img/main/main_bg01.jpg); */
 }
 
 .bg-img-2 {
-	background-image: url(../img/main/main_bg02.png);
+	/* background-image: url(../img/main/main_bg02.png); */
 }
 
 .bg-img-3 {
-	background-image: url(../img/main/main_bg03.png);
+	/* background-image: url(../img/main/main_bg03.png); */
 }
 
 .bg-img-4 {
-	background-image: url(../img/main/main_bg04.png);
+	/* background-image: url(../img/main/main_bg04.png); */
 }
 
 /* 11. hero */
@@ -1510,7 +1510,7 @@ padding: 0 44px; }
 
 
 .nav_wrapper .side-nav .rtl-dir ul {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
 .nav_wrapper .side-nav li>a {
@@ -2750,8 +2750,10 @@ height: 100vh;
 
 	.side-nav {
     transform: translateX(0) !important;
-    top: 53px;
+    top:45px;
     background: transparent;
+	height:50px;
+	overflow:hidden;
 }
 
 .side-nav .rtl-dir .title_side, .side-nav .rtl-dir .title_side ._home_ {
@@ -2760,8 +2762,17 @@ height: 100vh;
 }
 .rtl-dir_center {
     justify-content: right;
+	align-items:center;
+	gap:20px;
 }
 
+
+.side-nav .rtl-dir .LEFT_side-nav {
+    margin-right: 0;
+}
+.side-nav .rtl-dir .RIGHT_side-nav {
+	margin-right:50px;
+}
 
 ._side-nav {
     display: none; 
@@ -2778,6 +2789,8 @@ height: 100vh;
 .brand-logo-CENTER.design-font {
     font-size: 35px;
 }
+
+nav .button-collapse{display:none;}
 	
 }
 
