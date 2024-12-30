@@ -1939,30 +1939,44 @@
                             }
                         });
 
-
                         $(document).ready(function () {
-                            // Enable dropdown submenus to be toggled on click
-                            $('.dropdown-submenu a.dropdown-toggle').on("click", function(e) {
-                                e.preventDefault();
-                                e.stopPropagation();
+    // Enable dropdown submenus to toggle on click
+    $('.dropdown-submenu > .dropdown-item').on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
 
-                                var $subMenu = $(this).next('.dropdown-menu');
-                                var $parentMenu = $(this).parents('.dropdown-menu').first();
+        var $subMenu = $(this).next('.dropdown-menu');
+        var $parentMenu = $(this).closest('.dropdown-menu');
 
-                                // Hide any open submenus
-                                $parentMenu.find('.dropdown-menu').not($subMenu).removeClass('show');
+        // Hide any open submenus within the parent menu
+        $parentMenu.find('.dropdown-menu').not($subMenu).removeClass('show');
 
-                                // Toggle the submenu
-                                $subMenu.toggleClass('show');
-                            });
+        // Toggle the visibility of the clicked submenu
+        $subMenu.toggleClass('show');
+    });
 
-                            // Close all dropdowns when clicking outside
-                            $(document).on('click', function (e) {
-                                if (!$(e.target).closest('.dropdown').length) {
-                                    $('.dropdown-menu.show').removeClass('show');
-                                }
-                            });
-                        });
+    // Main dropdown toggle
+    $('.dropdown > button').on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var $menu = $(this).siblings('.dropdown-menu');
+
+        // Hide other open dropdown menus
+        $('.dropdown-menu').not($menu).removeClass('show');
+
+        // Toggle the visibility of the main dropdown menu
+        $menu.toggleClass('show');
+    });
+
+    // Close all dropdowns when clicking outside
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.dropdown').length) {
+            $('.dropdown-menu').removeClass('show');
+        }
+    });
+});
+
 
 
 
