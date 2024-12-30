@@ -51,7 +51,7 @@
                                 </h2>
                             </ul>
 							<ul id="menu" class="LEFT_side-nav">
-								<h2 class="title_side">PRODUCT</h2>
+								<h2 class="title_side dropmenu">PRODUCT</h2>
 								<li data-menuanchor="page2" class="t1 _side-nav">
 									<a class="waves-effect waves-light" href="#page2" tab="1"><i class="fi fi-ss-asterik"></i> Sports Book</a>
                                 </li>
@@ -68,7 +68,7 @@
                             </ul>
 							
 							<ul id="menu" class="LEFT_side-nav">
-								<h2 class="title_side">COMPANY</h2>
+								<h2 class="title_side dropmenu">COMPANY</h2>
 								<li data-menuanchor="page3" class="">
 									<a class="waves-effect waves-light" href="#page3"><i class="fi fi-ss-asterik"></i> About</a>
                                 </li>
@@ -1906,6 +1906,47 @@
 								$(".teleid").text('Telegram: ');
                             }
                         });
+
+
+                        document.addEventListener("DOMContentLoaded", function () {
+    const titleSide = document.querySelector(".title_side.dropmenu");
+    const menu = document.getElementById("menu");
+    const menuItems = menu.querySelectorAll(".t1._side-nav, .t3._side-nav, .t4._side-nav, .t5._side-nav");
+
+    if (titleSide) {
+        // Click event for the title to toggle menu visibility
+        titleSide.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevent the event from bubbling up
+
+            // Remove active class from all menu items first
+            menuItems.forEach(item => item.classList.remove("active"));
+
+            // Toggle the active state for the current menu
+            let current = titleSide.nextElementSibling;
+            while (current && current.matches("li._side-nav")) {
+                current.classList.toggle("active");
+                current = current.nextElementSibling;
+            }
+        });
+    }
+
+    // Click event on the document to remove active classes when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target)) {
+            menuItems.forEach(item => item.classList.remove("active"));
+        }
+    });
+
+    // Optional: Remove active class when clicking another menu item
+    menuItems.forEach(item => {
+        item.addEventListener("click", function () {
+            menuItems.forEach(i => i.classList.remove("active")); // Hide all menu items
+        });
+    });
+});
+
+
+
                     </script>
                 </div>
             </body>
