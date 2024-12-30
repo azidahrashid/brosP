@@ -2761,6 +2761,16 @@ height: 100vh;
 .rtl-dir_center {
     justify-content: right;
 }
+
+
+._side-nav {
+    display: none; 
+}
+
+._side-nav.active {
+    display: block;
+}
+
 	
 }
 
