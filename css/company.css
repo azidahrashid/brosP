@@ -2746,6 +2746,20 @@ height: 100vh;
 	.tabs .tab a {
 		font-size:20px;
 	}
+
+
+	.side-nav {
+    transform: translateX(0) !important;!I;!;
+    top: 53px;
+    background: transparent;
+}
+
+.side-nav .rtl-dir .title_side, .side-nav .rtl-dir .title_side ._home_ {
+    font-size: 20px;
+
+}
+
+	
 }
 
 
