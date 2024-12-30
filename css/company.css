@@ -38,6 +38,7 @@ html, body {
 
 body {
 	/* line-height: 1; */
+	background-color: #241440;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -1417,7 +1418,8 @@ button.swiper-pagination-bullet {
     left: 0;
     top: 120px;
     height: calc(100% - 122px);
-    width: 100%; font-family: SBAggroB;
+    width: 100%;
+    font-family: SBAggroB;
  }
  
  .side-nav .rtl-dir {
@@ -1638,11 +1640,14 @@ padding: 0 44px; }
 nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i , .nav_wrapper {    height: 120px;}
 .nav_wrapper {
     position: relative;
-
+    background-color: rgb(67 16 96 / 70%);
+    height: 73px;
+    margin-top: 30px;
 }
 
 #main-header {
-		background-color:#000000;padding:0;
+		background-color: transparent;
+		padding:0;
 }
 .scroll-downs {
   position: absolute;
@@ -2734,7 +2739,7 @@ height: 100vh;
 }
 
 .swiper-slide-inner-bg img {
-	width: fit-content;
+	width: 100%;
 }
 
 @media all and (min-width:769px){
