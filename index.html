@@ -17,6 +17,7 @@
         <link rel="stylesheet" type="text/css" href="./css/animate.css" />
         <link rel="stylesheet" type="text/css" href="./css/min/jquery.pagepiling.css" />
         <script src="./js/min/materialize.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="./css/bro.css" media="all" />
         <link rel="stylesheet" type="text/css" href="./css/company.css" media="all" />
         <script type="text/javascript" src="./js/min/jquery.pagepiling.min.js"></script>
         <script type="text/javascript" src="./js/promotional.js"></script>
@@ -29,7 +30,7 @@
                 <a class="brand-logo design-font  no-bg"  href="#page1">
                     <img class="responsive-img logo" src="./img/logo/smgame.gif" alt="" />
                 </a>
-                <a class="brand-logo-CENTER design-font  no-bg" href="#page1" bis_skin_checked="1">
+                <a class="brand-logo-CENTER design-font  no-bg" href="#page1" >
                     <h1>POKERBROS</h1>
                 </a>
                 <!-- Main Menu Hamburger Icon for Mobile And Screen Width less than 993px -->
@@ -72,7 +73,7 @@
 									<a class="" href="#page2" tab="5"><i class="fi fi-ss-asterik"></i> Premium Games</a>
                                 </li>
                             </ul>       
-                        -->
+                     
  
 
                             <ul class="dropdown">
@@ -93,19 +94,8 @@
 									<a class="dropdown-item " href="#page2" tab="5"><i class="fi fi-ss-asterik"></i> Premium Games</a>
                                 </li>
                                 </ul>
-                            </ul>                            
-
-
-	
-
-                            <ul id="menu" class=" LEFT_side-nav">
-								<h2 class="title_side ">
-									<li data-menuanchor="page1" class="">
-										<a class="" href="#page3">ABOUT</a>
-                                    </li>
-                                </h2>
-                            </ul>
-							<ul id="menu" class="RIGHT_side-nav">
+                            </ul>       
+                            <ul id="menu" class="RIGHT_side-nav">
 								<h2 class="title_side">PACKAGES</h2>
 								<li data-menuanchor="page4" class="_side-nav">
 									<a class="" href="#page4" tab="6"><i class="fi fi-ss-asterik"></i> Pricing</a>
@@ -128,7 +118,19 @@
 										<a class=" no-bg nav-item" href="./pdf/casino_v4_color_sample.pdf"><i class="fi fi-ss-asterik"></i> Template Color Casino</a>
                                     </li>
                                 </ul>
+                            </ul>                     
+
+   -->
+	
+
+                            <ul id="menu" class=" LEFT_side-nav">
+								<h2 class="title_side ">
+									<li data-menuanchor="page3" class="">
+										<a class="" href="#page3">ABOUT</a>
+                                    </li>
+                                </h2>
                             </ul>
+							
                         </div>
                     </div>
 					
@@ -147,9 +149,700 @@
             </div>
         </nav>
 		<div id="pagepiling" class="maincontent">
-			<!---section1--->
-			<section class="section main_section" id="section1">
-				<!-- home start -->
+		
+			
+			<!---section1--->		
+            <section class="section main_section" id="section1">
+                <div id="app">
+                    <style>
+                        /* Basic Reset and Styles */
+                        body, html {
+                            margin: 0;
+                            padding: 0;
+                            font-family: Arial, sans-serif;
+                        }
+                        .section__ {
+                            height: 100vh; /* Full viewport height */
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            opacity: 0;
+                            transition: opacity 1s ease;
+                        }
+                        .section__.active {
+                            opacity: 1;
+                        }
+                        .section__ h1 {
+                            color: white;
+                            font-size: 3rem;
+                        }
+                        .section__:nth-child(odd) {
+                            background-color: #241440;
+                        }
+                        .section__:nth-child(even) {
+                            background-color: #241440;
+                        }
+
+/* Bullet container styling */
+.bullet-navigation {
+    display: flex;
+    flex-direction: column; /* Arrange bullets vertically */
+    gap: 10px;              /* Space between bullets */
+    position: fixed;        /* Keep it fixed on the screen */
+    top: 50%;               /* Center vertically */
+    left: 20px;             /* Adjust horizontal position */
+    transform: translateY(-50%);
+    z-index: 1000;          /* Ensure it stays on top */
+}
+
+/* Default bullet style */
+.bullet {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #007bff; /* Border color (primary color) */
+    border-radius: 50%;        /* Circular shape */
+    background-color: transparent; /* Transparent background */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for bullets */
+.bullet:hover {
+    background-color: #007bff; /* Fill with primary color */
+    transform: scale(1.2);     /* Slightly enlarge on hover */
+}
+
+/* Active bullet style */
+.bullet.active {
+    background-color: #007bff; /* Fill with primary color */
+    border-color: #0056b3;     /* Darker border for active state */
+    transform: scale(1.4);     /* Slightly larger size */
+}
+
+                    </style>
+             
+                
+                    <div class="  av-section-1 " id="section__1">
+                        <div class="av-section-1__wrap section__">
+
+                            <div class="coin coin--100 image--object-max animated rollIn fade " style="opacity: 1;" ><img src="./img/PlayPokerBros/100.png" alt="100" class="has--handle-cursor" /></div>
+                            <div class="coin coin--25 image--object-max fade animated rollIn" style="opacity: 1;" ><img src="./img/PlayPokerBros/25.png" alt="25" class="has--handle-cursor" /></div>
+                            <div class="coin coin--50 image--object-max fade animated rollIn" style="opacity: 1;" ><img src="./img/PlayPokerBros/50.png" alt="50" class="has--handle-cursor" /></div>
+                            <div class="coin coin--25-dup image--object-max fade animated rollIn" style="opacity: 1;" ><img src="./img/PlayPokerBros/25-1.png" alt="25-1" class="has--handle-cursor" /></div>
+                            <div class="av-section-1__character animated zoomIn"  style="opacity: 1;"><img src="./img/PlayPokerBros/landing-replace.png" alt="Char 1" class="has--handle-cursor" /></div>
+                            <div class="av-section-1--char-center" >
+                                <div class="av-section-1__big-logo animated slideInDown"  style="opacity: 1;">
+                                    <img src="./img/PlayPokerBros/big-logo.png" alt="Big Logo" class="d-sm-inline d-none has--handle-cursor" />
+                                    <img src="./img/PlayPokerBros/Logo-FeelTheFun-1.png" alt="Logo-FeelTheFun-1" class="d-sm-none d-block has--handle-cursor" />
+                                </div>
+                                <div class="av-section-1__market d-sm-flex flex-column d-none" >
+                                    <div class="av-section-1__market-group d-sm-flex d-none fadeIn animated" >
+                                        <a
+                                            target="_blank"
+                                            href="#""
+                                            class="av-section-1__market-link fade-up has--handle-cursor"
+                                            style="transform: translate(0px, 0px); opacity: 1;"
+                                            bis_size='{"x":1160,"y":1121,"w":156,"h":46,"abs_x":1160,"abs_y":1121}'
+                                        >
+                                            <img
+                                                src="./img/PlayPokerBros/appstore-download2-min.svg"
+                                                alt="App Store"
+                                                class="av-section-1__market-icon has--handle-cursor"
+                                                bis_size='{"x":1160,"y":1121,"w":156,"h":46,"abs_x":1160,"abs_y":1121}'
+                                                bis_id="bn_76f4ttomtrauvoigqgefuj"
+                                            />
+                                        </a>
+                                        <a target="_blank" href="#" class="av-section-1__market-link fade-up has--handle-cursor" style="transform: translate(0px, 0px); opacity: 1;">
+                                            <img src="./img/PlayPokerBros/play-store.svg" alt="App Store" class="av-section-1__market-icon has--handle-cursor" />
+                                        </a>
+                                        <a target="_blank" href="" class="av-section-1__market-link fade-up has--handle-cursor" style="transform: translate(0px, 0px); opacity: 1;">
+                                            <img src="./img/PlayPokerBros/direct-download2-min.svg" alt="Diret Download Apk" class="av-section-1__market-icon has--handle-cursor" />
+                                        </a>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="av-section-1__big-image animated rollIn"  style="opacity: 1;"><img src="./img/PlayPokerBros/mobile-game.png" alt="Mobile Game" class="has--handle-cursor" /></div>
+                            <div class="av-section-1__market d-sm-none d-flex flex-column text-center" >
+                                <div class="av-section-1__market-group d-sm-none d-flex text-center" >
+                                    <a target="_blank" href="https://apps.apple.com/us/app/pokerbros/id1463376042" class="av-section-1__market-link fade-up has--handle-cursor" style="transform: translate(0px, 0px); opacity: 1;">
+                                        <img src="./img/PlayPokerBros/appstore-download2-min.svg" alt="App Store" class="av-section-1__market-icon has--handle-cursor" />
+                                    </a>
+                                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.kpgame.PokerBros&amp;hl=en" class="av-section-1__market-link fade-up has--handle-cursor" style="transform: translate(0px, 0px); opacity: 1;">
+                                        <img src="./img/PlayPokerBros/play-store.svg" alt="App Store" class="av-section-1__market-icon has--handle-cursor" />
+                                    </a>
+                                    <a target="_blank" href="https://www.pokerbros.net/uploads/apk/pokerbros-v91.apk" class="av-section-1__market-link fade-up has--handle-cursor" style="transform: translate(0px, 0px); opacity: 1;">
+                                        <img src="./img/PlayPokerBros/direct-download2-min.svg" alt="Direct Download Apk" class="av-section-1__market-icon has--handle-cursor" />
+                                    </a>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                     
+                    
+                    </div>
+                    <div class="av-section-5 section-page" id="section__2">
+                        <div class="av-section-5__wrap section__"  style="opacity: 1; transform: translate(0px, 0px);">
+                            <div class="av-section-5__big-image image--object-max"  style="opacity: 1;"><img src="./img/PlayPokerBros/we-are-pokerbross.png" alt="Poker Bros" class="has--handle-cursor"></div>
+                            <div class="av-section-5__content" >
+                                <div class="av-section-5__content-heading extra--heading fade-up" style="transform: translate(0px, 0px); opacity: 1;" ><span>WE ARE POKERBROS</span></div>
+                                <div class="av-section-5__content-body fade-up text-white" style="transform: translate(0px, 0px); opacity: 1;" >
+                                    <p>Experience the excitement of poker on the app that puts you in charge. Jump straight into your favourite games or host your own exclusive tables where every aspect of the game is uniquely customizable. Tame the wildest games around and put
+                                        your stamp on the world of online poker!</p>
+                                    <p class="mb-0">Exhilarating, interactive, fun: this is poker, exactly how you want it.</p>
+                                </div>
+                            </div>
+                        </div>                        </div>
+                    <div class="av-section-3 section-page " id="section__3">
+                        <div class="av-section-3__wrap section__" ><div class="av-section-3__content" ><h2 class="av-section-3__content-heading fade-up extra--heading" style="transform: translate(0px, 0px); opacity: 1;">VISIT THE GOLD LOBBY</h2> <div class="av-section-3__content-body text-white" ><p class="fade-up mb-md-5 mb-4" style="transform: translate(0px, 0px); opacity: 1;">It’s easy to get straight into the action; setting up takes minutes and is completely free.</p> <p class="fade-up mb-0" style="transform: translate(0px, 0px); opacity: 1;">Visit the Gold Lobby, where games from the classic No Limit Hold’em to Strip Deck and Pot Limit Omaha are running 24/7. Take on - and take down - players from around the world!</p></div></div> <div class="av-section-3__picture"  style="opacity: 1;"><img src="./img/PlayPokerBros/the-lobby.png" alt="the-lobby" class="d-sm-block d-none has--handle-cursor"> <img src="./img/PlayPokerBros/the-lobby-mobile.png" alt="the-lobby" class="d-sm-none d-block has--handle-cursor"></div></div>
+                    </div>
+                    <div class="av-section-4 section-page " id="section__4">
+                        <div class="av-section-4__wrap section__"  ><div class="av-section-4__pc-content d-sm-block d-none h-100" ><div class="row align-items-center justify-content-between h-100" ><div class="av-section-4__content col-auto left" ><div class="av-section-4__content-image" ><img src="./img/PlayPokerBros/Card_2-1.png" alt="Poker Card" class="has--handle-cursor"></div> <div class="av-section-4__content-heading extra--heading" >CREATE A CLUB</div> <div class="av-section-4__content-body text-white" ><p class="fade-up" style="transform: translate(0px, 100px); opacity: 0;">Create your own poker Club with ring games and tournaments designed to your specifications, then invite friends to play. Set up the tables and show your poker circle who’s boss.</p></div></div> <div class="av-section-4__content col-auto right" ><div class="av-section-4__content-image" ><img src="./img/PlayPokerBros/Card_1-1.png" alt="Poker Card" class="has--handle-cursor"></div> <div class="av-section-4__content-heading extra--heading" >JOIN CLUBS</div> <div class="av-section-4__content-body text-white" ><p class="fade-up" style="transform: translate(0px, 100px); opacity: 0;">Join a ready-made Club by requesting access using its unique Club ID. Once accepted, you’re ready to join the action. Win bragging rights across multiple Clubs – there’s no limit to the number you can join.</p></div></div></div></div> <div class="mobile--slider d-sm-none d-block h-100" ><div class="swiper-container swiper-container-initialized swiper-container-horizontal" ><div class="swiper-wrapper"  style="transition-duration: 0ms;"><div class="swiper-slide" ><div class="av-section-4__slide" ><div class="av-section-4__slide-image image--object-fit" ><img src="./img/PlayPokerBros/Card_2-1.png" alt="Poker Card" class="has--handle-cursor"></div> <div class="av-section-4__slide-heading extra--heading" >
+                        CREATE A CLUB
+                    </div> <div class="av-section-4__slide-body text-white" ><p>
+                            Create your very own poker club, complete
+                            with ring games and tourneys, and then
+                            invite friends over to show them that you
+                            really are the poker king!
+                        </p></div></div></div> <div class="swiper-slide" ><div class="av-section-4__slide" ><div class="av-section-4__slide-image image--object-fit" ><img src="./img/PlayPokerBros/Card_1-1.png" alt="Poker Card" class="has--handle-cursor"></div> <div class="av-section-4__slide-heading extra--heading" >
+                        JOIN CLUBS
+                    </div> <div class="av-section-4__slide-body text-white" ><p>
+                            Become part of a club. Grab an ID from a
+                            friend and request access. Once accepted,
+                            you’ll be able to join the action and win
+                            bragging rights by coming out on top.
+                        </p></div></div></div> </div><div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets" ></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div></div></div>
+                    </div>
+                    <div class="av-section-4-after section-page " id="section__5">
+                        <div class="av-section-4-after__wrap section__" ><div class="av-section-4-after__pc-content" ><div class="row" ><div class="col" ><div class="av-section-4-after__thumbnail fade" style="opacity: 0;" ><img src="./img/PlayPokerBros/section-4-after-thumb-1.png" alt="Psection-4-after-thumb-1" class="has--handle-cursor"></div> <h2 class="extra--heading fade-up" style="transform: translate(0px, 100px); opacity: 0;">DAILY BONUS</h2> <p class="text-white mb-0 fade-up" style="transform: translate(0px, 100px); opacity: 0;">Log in every day to receive a juicy free gift! We reward every player for dropping in at PokerBROS, with the most regular visitors getting huge boosts to their coin balance. It really does pay to check in as often as you can!</p></div> <div class="col" ><div class="av-section-4-after__thumbnail fade" style="opacity: 0;" ><img src="./img/PlayPokerBros/section-4-after-thumb-2.png" alt="Psection-4-after-thumb-2" class="has--handle-cursor"></div> <h2 class="extra--heading fade-up" style="transform: translate(0px, 100px); opacity: 0;">TOURNAMENTS</h2> <p class="text-white mb-0 fade-up" style="transform: translate(0px, 100px); opacity: 0;">Think you’re the poker king? Prove it by entering one of the high-octane tournaments on offer. Test yourself against some of the best players around in a variety of formats to push your poker skills to the limit.</p></div> <div class="col" ><div class="av-section-4-after__thumbnail fade" style="opacity: 0;" ><img src="./img/PlayPokerBros/section-4-after-thumb-3.png" alt="Psection-4-after-thumb-3" class="has--handle-cursor"></div> <h2 class="extra--heading fade-up" style="transform: translate(0px, 100px); opacity: 0;">LUCKY DRAW</h2> <p class="text-white mb-0 fade-up" style="transform: translate(0px, 100px); opacity: 0;">Spin the wheel to win a prize! Daily free spins award prizes ranging from gems to free emojis, with a win guaranteed every time.  Fancy another Lucky Draw? Use Gold to buy additional spins at any time.</p></div></div></div> <!----></div>
+                    </div>
+                    
+
+                    
+                    <footer class="footer-distributed">
+
+                        <div class="footer-bottom-wrap">
+                            <div class="footer-bottom">
+                                <div class="footer-left divider_vert">
+                                    <img src="./img/logo/SMGAME_SOLUTION.png" alt="logo" height="15px" />
+                                    <p class="footer-company-name">SMGame &copy; 2023</p>
+                                    <p class="about_company2">
+                                        유럽형 스포츠토토, 카지노솔루션<br />
+                                        분양 및 임대를 합리적인 가격에 제공합니다.
+                                    </p>
+                                </div>
+                                <div class="footer-center divider_vert">
+
+                                    <div class="fi_wrap">
+                                        <i class="fi fi-brands-telegram"></i>
+                                        <p>
+                                            <a href="https://t.me/rchlrc" class="telelink teleid">Telegram: @rchlrc </a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="footer-right divider_vert">
+                                    <p class="footer-company-about"><span>About the company</span> company registered and established under the laws of Curacao</p>
+                                    <div class="footer-icons">
+                                        <div class="licensed_logo">
+                                            <img src="./img/footer/gaming_curacao.png" alt="img_curacao" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+                </div>
+                <div class="bullet-navigation"></div>
+            </section>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+                    <script>
+
+
+
+// Select all sections and the bullet navigation container
+var sections = document.querySelectorAll('.section__');
+var bulletContainer = document.querySelector('.bullet-navigation');
+
+// Generate bullets dynamically
+sections.forEach((section, index) => {
+    var bullet = document.createElement('div');
+    bullet.classList.add('bullet');
+    bullet.setAttribute('data-target', `#${section.id}`); // Link bullet to section ID
+    bullet.setAttribute('aria-label', `Navigate to section ${index + 1}`);
+    bulletContainer.appendChild(bullet);
+});
+
+// Select all bullets after creation
+var bullets = document.querySelectorAll('.bullet');
+
+// Initialize ScrollMagic Controller
+var controller = new ScrollMagic.Controller();
+
+// Create scenes for each section__
+document.querySelectorAll('.section__').forEach(function (section) {
+    new ScrollMagic.Scene({
+        triggerElement: section,   // Trigger the scene when the section__ comes into view
+        triggerHook: 0.7,          // Trigger at the middle of the viewport
+        duration: '80%'            // Animation lasts for 80% of the viewport height
+    })
+    .on('enter', function () {    // When the section enters the viewport
+        gsap.to(section, {
+            opacity: 1,           // Fade in
+            scale: 1,             // Scale to original size
+            duration: 1           // Animation duration
+        });
+    })
+    .on('leave', function () {    // When the section leaves the viewport
+        gsap.to(section, {
+            opacity: 0,           // Fade out
+            scale: 0.8,           // Scale down slightly
+            duration: 1           // Animation duration
+        });
+    })
+    .addTo(controller);
+});
+
+// Add click event for smooth scrolling
+bullets.forEach(bullet => {
+    bullet.addEventListener('click', function () {
+        var targetSection = document.querySelector(this.getAttribute('data-target'));
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+
+                    </script>
+            
+			
+			<!---section2--->	
+			
+            <section class="section main_section" id="section2">
+                <div class="container_products">
+                    <div class="row">
+                        <div id="tab1" class="col s12 tabs_content" tab="1">
+							<header class="gradient-color blog-main-header"id="pageheader"><div class="gradient-color overlay"></div><div class="title"><h2>Sports Book</h2><h4 class="description"></h4></div></header>
+                        </div>
+						
+                        <div id="tab3" class="col s12 tabs_content" tab="3">
+							<header class="gradient-color blog-main-header"id="pageheader"><div class="gradient-color overlay"></div><div class="title"><h2>Live Casino</h2><h4 class="description"></h4></div></header>
+                        </div>
+                        <div id="tab4" class="col s12 tabs_content" tab="4">
+                            <header class="gradient-color blog-main-header"id="pageheader"><div class="gradient-color overlay"></div><div class="title"><h2>Slots</h2><h4 class="description"></h4></div></header>
+                        </div>
+                        <div id="tab5" class="col s12 tabs_content" tab="5">
+							<header class="gradient-color blog-main-header"id="pageheader"><div class="gradient-color overlay"></div><div class="title"><h2>Premium Games</h2><h4 class="description"></h4></div></header>
+                        </div>
+						
+						
+						
+						
+                        <div class="col s12 tab__container">
+                            <ul class="tabs black your-list">
+                                <li class="tab col _tab-li rtl-dir_center">
+                                    <a class="white-text" href="#tab1" tab="1">Sports Book</a>
+                                </li>
+								
+                                <li class="tab col _tab-li">
+                                    <a class="white-text" href="#tab3" tab="3">Live Casino</a>
+                                </li>
+                                <li class="tab col _tab-li">
+                                    <a class="white-text" href="#tab4" tab="4">Slots</a>
+                                </li>
+                                <li class="tab col _tab-li">
+                                    <a class="white-text" href="#tab5" tab="5">Premium Games</a>
+                                </li>
+                            </ul>
+                        </div>
+						
+						
+						
+						
+						
+                        <div id="tab1" class="col s12 tabs_content2" tab="1">
+                            <div id="product_wrap" class="bg1">
+                                <div class="row">
+                                    <div class="col_card">
+                                        <div class="card transparent  icon_card">
+                                            <div class="card-image">
+                                                <i class="fi fi-ss-basketball-hoop"></i>
+                                                <span class="card-title_">Pre-Match</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>매월 140,000+ 경기 프리매치 피드<br>서비스를 제공합니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="card transparent  icon_card">
+                                            <div class="card-image">
+                                                <i class="fi fi-ss-globe"></i>
+                                                <span class="card-title_">Live Feed</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>매월 30,000+ 경기 실시간 피드<br>서비스를 제공합니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="card transparent  icon_card">
+                                            <div class="card-image">
+                                                <i class="fi fi-ss-flag-alt"></i>
+                                                <span class="card-title_">All Matches</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>비인기 종목부터 탑티어 경기들<br>전부 제공합니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="card transparent  icon_card">
+                                            <div class="card-image">
+                                                <i class="fi fi-ss-clip"></i>
+                                                <span class="card-title_">Traker</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>H2H, STAT CENTRE 및 매치 트래커<br>서비스를 제공합니다.</p>
+                                            </div>
+                                        </div>
+										
+                                        <div class="card transparent  icon_card">
+                                            <div class="card-image">
+                                                <i class="fi fi-ss-desktop-wallpaper"></i>
+                                                <span class="card-title_">Risk Management</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>리스크 매니지먼트<br>서비스를 제공합니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="card transparent  icon_card">
+                                            <div class="card-image">
+                                                <i class="fi fi-ss-grin-stars"></i>
+                                                <span class="card-title_">High Quality</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>고품질 모바일 및 PC 스포츠북 기능을<br>제공합니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="card transparent  icon_card">
+                                            <div class="card-image">
+                                                <i class="fi fi-ss-headset"></i>
+                                                <span class="card-title_">Convenience</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>최고성을 자랑하는 편리한 관리자 기능을<br>제공합니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="card transparent  icon_card">
+                                            <div class="card-image">
+                                                <i class="fi fi-ss-handshake-angle"></i>
+                                                <span class="card-title_">Service Center</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>24/7 서포트 지원<br>서비스를 제공합니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+                        <div id="tab3" class="col s12 tabs_content2" tab="3">
+                            <div id="product_wrap" class="bg2">
+                                <div class="row">
+                                    <div class="col_card">
+                                        <div class="partnerlogo">
+                                            <div class="partnerlogo">
+                                                <img class="img_ top3" src="./img/provider/livecasino/provider_logo(3).png" alt="" />
+                                                <img class="img_ top3" src="./img/provider/livecasino/provider_logo(5).png" alt="" />
+                                                <img class="img_ top3" src="./img/provider/livecasino/provider_logo(6).png" alt="" />
+                                                <img class="img_" src="./img/provider/livecasino/provider_logo(1).png" alt="" />
+                                                <img class="img_" src="./img/provider/livecasino/provider_logo(2).png" alt="" />
+												
+                                                <img class="img_" src="./img/provider/livecasino/provider_logo(4).png" alt="" />
+												
+                                                <img class="img_" src="./img/provider/livecasino/provider_logo(7).png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab4" class="col s12 tabs_content2" tab="4">
+                            <div id="product_wrap" class="bg3">
+                                <div class="row">
+                                    <div class="col_card">
+                                        <div class="partnerlogo">
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(16).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(17).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(18).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(19).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(20).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(21).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(22).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(23).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(24).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(25).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(26).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(27).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(36).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(37).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(30).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(31).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(32).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(33).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(34).png" alt="" />
+                                            <img class="img_" src="./img/provider/slot/provider_logo_(35).png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab5" class="col s12 tabs_content2" tab="5">
+                            <div id="product_wrap" class="bg4">
+                                <div class="row m-0 grey_bg">
+                                    <div class="col_card">
+										<div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(1).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>FX 마진 게임 제공</p>
+                                            </div>
+                                        </div>
+										<div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(2).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>스카이파크 게임 제공</p>
+                                            </div>
+                                        </div>
+                                        
+										<div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(13).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>EOS 파워볼 제공</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+										<div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(14).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>파워사다리 제공</p>
+                                            </div>
+                                        </div>
+                                        
+										<div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(15).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>스피드 홈런 제공</p>
+                                            </div>
+                                        </div>
+                                        
+										<div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(3).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>BET365 가상 축구 게임 제공</p>
+                                            </div>
+                                        </div>
+										<div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(4).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>BET365 가상 농구 게임 제공</p>
+                                            </div>
+                                        </div>
+                                        <div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(5).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>BET365 가상 미식축구 게임 제공</p>
+                                            </div>
+                                        </div>
+										
+                                        <div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(6).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>BET365 가상 테니스 게임 제공</p>
+                                            </div>
+                                        </div>
+										
+                                        <div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(7).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>BET365 가상 크리켓 게임 제공</p>
+                                            </div>
+                                        </div>
+										
+                                        <div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(8).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>BET365 가상 트로팅 게임 제공</p>
+                                            </div>
+                                        </div>
+										
+                                        <div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(9).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>BET365 가상 사이클링 게임 제공</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+										<div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(10).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>BET365 가상 다트 게임 제공</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+										<div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(11).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>BET365 가상 경마 게임 제공</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+										<div class="card black img_card rounded_">
+                                            <div class="card-image">
+                                                <img src="./img/game/game(12).png" alt="game" />
+                                                
+                                            </div>
+                                            <div class="card-content">
+                                                <p>BET365 가상 개경주 게임 제공</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        
+										
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+                </div>
+                <footer class="footer-distributed">
+                    <div class="footer_top">
+                        <div class="box_left">
+                            <i class="fi fi-ss-comment"></i>
+                        </div>
+                        <div class="box_center">
+                            <h2 class="title_contact m-bottom">Contact</h2>
+                            <p class="subtitle_contact m-bottom">비즈니스 개발팀을 만나보세요</p>
+                            <p class="sub_title_contact_ m-bottom">게임과 관련된 요구 사항, 비즈니스 또는 기타 모든 사항에 대해 자유롭게 질문하십시오.</p>
+                        </div>
+                        <div class="box_right">
+                            <ul class="box_right-content">
+                                <li class="box_right-item">
+                                    <p class="box_right-item-p teleid">Telegram: @rchlrc</p>
+                                </li>
+                                <li class="box_right-item">
+                                    <a class="btn-outline cs_link telelink" href="https://t.me/rchlrc">
+                                        <p class="btn-text">지금 바로 문의</p>
+                                        <i class="fi fi-ss-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom-wrap">
+                        <div class="footer-bottom">
+                            <div class="footer-left divider_vert">
+                                <img src="./img/logo/SMGAME_SOLUTION.png" alt="logo" height="35px" />
+								
+								<p class="footer-company-name">SMGame &copy; 2023</p>
+								<p class="about_company2">
+									유럽형 스포츠토토, 카지노솔루션<br />
+									분양 및 임대를 합리적인 가격에 제공합니다.
+                                </p>
+                            </div>
+							<div class="footer-center divider_vert">
+								<div class="menu_footer_link">
+									<div class="menu_footer_link_group">
+										<p class="footer-links-title">Product</p>
+										<p class="footer-links">
+											<a href="#" tab="1">Sports Book</a>
+											<a href="#" tab="3">Live Casino</a>
+											<a href="#" tab="4">Slots</a>
+											<a href="#" tab="5">Premium Games</a>
+                                        </p>
+                                    </div>
+									
+									<div class="menu_footer_link_group">
+										<p class="footer-links-title">Packages</p>
+										<p data-menuanchor="page4" class="footer-links">
+											<a href="#page4" tab="1">Pricing</a>
+											
+                                        </p>
+                                    </div>
+									<div class="menu_footer_link_group">
+										<p class="footer-links-title">Company</p>
+										<p data-menuanchor="page3" class="footer-links">
+											<a href="#page3" tab="1">About</a>
+                                        </p>
+                                    </div>
+                                </div>
+								<div class="fi_wrap">
+									<i class="fi fi-brands-telegram"></i>
+									<p>
+										<a href="https://t.me/rchlrc" class="telelink teleid">Telegram: @rchlrc </a>
+                                    </p>
+                                </div>
+                            </div>
+							<div class="footer-right divider_vert">
+								<p class="footer-company-about"><span>About the SMGame</span> SMGame registered and established under the laws of Curacao</p>
+								<div class="footer-icons">
+									<div class="licensed_logo">
+										<img src="./img/footer/gaming_curacao.png" alt="img_curacao" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+				
+
+                	<!---section3--->
+			<section class="section main_section" id="section3">
+				
 				<div id="homeOT">
 					<div class="scroll-downs">
 						<div class="mousey">
@@ -511,611 +1204,6 @@
                     </div>
                 </div>
             </section>
-			
-			
-			
-			<!---section2--->	
-			
-            <section class="section main_section" id="section2">
-                <div class="container_products">
-                    <div class="row">
-                        <div id="tab1" class="col s12 tabs_content" tab="1">
-							<header class="gradient-color blog-main-header"id="pageheader"><div class="gradient-color overlay"></div><div class="title"><h2>Sports Book</h2><h4 class="description"></h4></div></header>
-                        </div>
-						
-                        <div id="tab3" class="col s12 tabs_content" tab="3">
-							<header class="gradient-color blog-main-header"id="pageheader"><div class="gradient-color overlay"></div><div class="title"><h2>Live Casino</h2><h4 class="description"></h4></div></header>
-                        </div>
-                        <div id="tab4" class="col s12 tabs_content" tab="4">
-                            <header class="gradient-color blog-main-header"id="pageheader"><div class="gradient-color overlay"></div><div class="title"><h2>Slots</h2><h4 class="description"></h4></div></header>
-                        </div>
-                        <div id="tab5" class="col s12 tabs_content" tab="5">
-							<header class="gradient-color blog-main-header"id="pageheader"><div class="gradient-color overlay"></div><div class="title"><h2>Premium Games</h2><h4 class="description"></h4></div></header>
-                        </div>
-						
-						
-						
-						
-                        <div class="col s12 tab__container">
-                            <ul class="tabs black your-list">
-                                <li class="tab col _tab-li rtl-dir_center">
-                                    <a class="white-text" href="#tab1" tab="1">Sports Book</a>
-                                </li>
-								
-                                <li class="tab col _tab-li">
-                                    <a class="white-text" href="#tab3" tab="3">Live Casino</a>
-                                </li>
-                                <li class="tab col _tab-li">
-                                    <a class="white-text" href="#tab4" tab="4">Slots</a>
-                                </li>
-                                <li class="tab col _tab-li">
-                                    <a class="white-text" href="#tab5" tab="5">Premium Games</a>
-                                </li>
-                            </ul>
-                        </div>
-						
-						
-						
-						
-						
-                        <div id="tab1" class="col s12 tabs_content2" tab="1">
-                            <div id="product_wrap" class="bg1">
-                                <div class="row">
-                                    <div class="col_card">
-                                        <div class="card transparent  icon_card">
-                                            <div class="card-image">
-                                                <i class="fi fi-ss-basketball-hoop"></i>
-                                                <span class="card-title_">Pre-Match</span>
-                                            </div>
-                                            <div class="card-content">
-                                                <p>매월 140,000+ 경기 프리매치 피드<br>서비스를 제공합니다.</p>
-                                            </div>
-                                        </div>
-                                        <div class="card transparent  icon_card">
-                                            <div class="card-image">
-                                                <i class="fi fi-ss-globe"></i>
-                                                <span class="card-title_">Live Feed</span>
-                                            </div>
-                                            <div class="card-content">
-                                                <p>매월 30,000+ 경기 실시간 피드<br>서비스를 제공합니다.</p>
-                                            </div>
-                                        </div>
-                                        <div class="card transparent  icon_card">
-                                            <div class="card-image">
-                                                <i class="fi fi-ss-flag-alt"></i>
-                                                <span class="card-title_">All Matches</span>
-                                            </div>
-                                            <div class="card-content">
-                                                <p>비인기 종목부터 탑티어 경기들<br>전부 제공합니다.</p>
-                                            </div>
-                                        </div>
-                                        <div class="card transparent  icon_card">
-                                            <div class="card-image">
-                                                <i class="fi fi-ss-clip"></i>
-                                                <span class="card-title_">Traker</span>
-                                            </div>
-                                            <div class="card-content">
-                                                <p>H2H, STAT CENTRE 및 매치 트래커<br>서비스를 제공합니다.</p>
-                                            </div>
-                                        </div>
-										
-                                        <div class="card transparent  icon_card">
-                                            <div class="card-image">
-                                                <i class="fi fi-ss-desktop-wallpaper"></i>
-                                                <span class="card-title_">Risk Management</span>
-                                            </div>
-                                            <div class="card-content">
-                                                <p>리스크 매니지먼트<br>서비스를 제공합니다.</p>
-                                            </div>
-                                        </div>
-                                        <div class="card transparent  icon_card">
-                                            <div class="card-image">
-                                                <i class="fi fi-ss-grin-stars"></i>
-                                                <span class="card-title_">High Quality</span>
-                                            </div>
-                                            <div class="card-content">
-                                                <p>고품질 모바일 및 PC 스포츠북 기능을<br>제공합니다.</p>
-                                            </div>
-                                        </div>
-                                        <div class="card transparent  icon_card">
-                                            <div class="card-image">
-                                                <i class="fi fi-ss-headset"></i>
-                                                <span class="card-title_">Convenience</span>
-                                            </div>
-                                            <div class="card-content">
-                                                <p>최고성을 자랑하는 편리한 관리자 기능을<br>제공합니다.</p>
-                                            </div>
-                                        </div>
-                                        <div class="card transparent  icon_card">
-                                            <div class="card-image">
-                                                <i class="fi fi-ss-handshake-angle"></i>
-                                                <span class="card-title_">Service Center</span>
-                                            </div>
-                                            <div class="card-content">
-                                                <p>24/7 서포트 지원<br>서비스를 제공합니다.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-						
-                        <div id="tab3" class="col s12 tabs_content2" tab="3">
-                            <div id="product_wrap" class="bg2">
-                                <div class="row">
-                                    <div class="col_card">
-                                        <div class="partnerlogo">
-                                            <div class="partnerlogo">
-                                                <img class="img_ top3" src="./img/provider/livecasino/provider_logo(3).png" alt="" />
-                                                <img class="img_ top3" src="./img/provider/livecasino/provider_logo(5).png" alt="" />
-                                                <img class="img_ top3" src="./img/provider/livecasino/provider_logo(6).png" alt="" />
-                                                <img class="img_" src="./img/provider/livecasino/provider_logo(1).png" alt="" />
-                                                <img class="img_" src="./img/provider/livecasino/provider_logo(2).png" alt="" />
-												
-                                                <img class="img_" src="./img/provider/livecasino/provider_logo(4).png" alt="" />
-												
-                                                <img class="img_" src="./img/provider/livecasino/provider_logo(7).png" alt="" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab4" class="col s12 tabs_content2" tab="4">
-                            <div id="product_wrap" class="bg3">
-                                <div class="row">
-                                    <div class="col_card">
-                                        <div class="partnerlogo">
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(16).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(17).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(18).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(19).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(20).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(21).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(22).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(23).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(24).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(25).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(26).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(27).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(36).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(37).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(30).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(31).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(32).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(33).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(34).png" alt="" />
-                                            <img class="img_" src="./img/provider/slot/provider_logo_(35).png" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab5" class="col s12 tabs_content2" tab="5">
-                            <div id="product_wrap" class="bg4">
-                                <div class="row m-0 grey_bg">
-                                    <div class="col_card">
-										<div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(1).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>FX 마진 게임 제공</p>
-                                            </div>
-                                        </div>
-										<div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(2).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>스카이파크 게임 제공</p>
-                                            </div>
-                                        </div>
-                                        
-										<div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(13).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>EOS 파워볼 제공</p>
-                                            </div>
-                                        </div>
-                                        
-                                        
-										<div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(14).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>파워사다리 제공</p>
-                                            </div>
-                                        </div>
-                                        
-										<div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(15).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>스피드 홈런 제공</p>
-                                            </div>
-                                        </div>
-                                        
-										<div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(3).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>BET365 가상 축구 게임 제공</p>
-                                            </div>
-                                        </div>
-										<div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(4).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>BET365 가상 농구 게임 제공</p>
-                                            </div>
-                                        </div>
-                                        <div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(5).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>BET365 가상 미식축구 게임 제공</p>
-                                            </div>
-                                        </div>
-										
-                                        <div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(6).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>BET365 가상 테니스 게임 제공</p>
-                                            </div>
-                                        </div>
-										
-                                        <div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(7).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>BET365 가상 크리켓 게임 제공</p>
-                                            </div>
-                                        </div>
-										
-                                        <div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(8).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>BET365 가상 트로팅 게임 제공</p>
-                                            </div>
-                                        </div>
-										
-                                        <div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(9).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>BET365 가상 사이클링 게임 제공</p>
-                                            </div>
-                                        </div>
-                                        
-                                        
-										<div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(10).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>BET365 가상 다트 게임 제공</p>
-                                            </div>
-                                        </div>
-                                        
-                                        
-										<div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(11).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>BET365 가상 경마 게임 제공</p>
-                                            </div>
-                                        </div>
-                                        
-                                        
-										<div class="card black img_card rounded_">
-                                            <div class="card-image">
-                                                <img src="./img/game/game(12).png" alt="game" />
-                                                
-                                            </div>
-                                            <div class="card-content">
-                                                <p>BET365 가상 개경주 게임 제공</p>
-                                            </div>
-                                        </div>
-                                        
-                                        
-                                        
-                                        
-										
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <footer class="footer-distributed">
-                    <div class="footer_top">
-                        <div class="box_left">
-                            <i class="fi fi-ss-comment"></i>
-                        </div>
-                        <div class="box_center">
-                            <h2 class="title_contact m-bottom">Contact</h2>
-                            <p class="subtitle_contact m-bottom">비즈니스 개발팀을 만나보세요</p>
-                            <p class="sub_title_contact_ m-bottom">게임과 관련된 요구 사항, 비즈니스 또는 기타 모든 사항에 대해 자유롭게 질문하십시오.</p>
-                        </div>
-                        <div class="box_right">
-                            <ul class="box_right-content">
-                                <li class="box_right-item">
-                                    <p class="box_right-item-p teleid">Telegram: @rchlrc</p>
-                                </li>
-                                <li class="box_right-item">
-                                    <a class="btn-outline cs_link telelink" href="https://t.me/rchlrc">
-                                        <p class="btn-text">지금 바로 문의</p>
-                                        <i class="fi fi-ss-arrow-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-bottom-wrap">
-                        <div class="footer-bottom">
-                            <div class="footer-left divider_vert">
-                                <img src="./img/logo/SMGAME_SOLUTION.png" alt="logo" height="35px" />
-								
-								<p class="footer-company-name">SMGame &copy; 2023</p>
-								<p class="about_company2">
-									유럽형 스포츠토토, 카지노솔루션<br />
-									분양 및 임대를 합리적인 가격에 제공합니다.
-                                </p>
-                            </div>
-							<div class="footer-center divider_vert">
-								<div class="menu_footer_link">
-									<div class="menu_footer_link_group">
-										<p class="footer-links-title">Product</p>
-										<p class="footer-links">
-											<a href="#" tab="1">Sports Book</a>
-											<a href="#" tab="3">Live Casino</a>
-											<a href="#" tab="4">Slots</a>
-											<a href="#" tab="5">Premium Games</a>
-                                        </p>
-                                    </div>
-									
-									<div class="menu_footer_link_group">
-										<p class="footer-links-title">Packages</p>
-										<p data-menuanchor="page4" class="footer-links">
-											<a href="#page4" tab="1">Pricing</a>
-											
-                                        </p>
-                                    </div>
-									<div class="menu_footer_link_group">
-										<p class="footer-links-title">Company</p>
-										<p data-menuanchor="page3" class="footer-links">
-											<a href="#page3" tab="1">About</a>
-                                        </p>
-                                    </div>
-                                </div>
-								<div class="fi_wrap">
-									<i class="fi fi-brands-telegram"></i>
-									<p>
-										<a href="https://t.me/rchlrc" class="telelink teleid">Telegram: @rchlrc </a>
-                                    </p>
-                                </div>
-                            </div>
-							<div class="footer-right divider_vert">
-								<p class="footer-company-about"><span>About the SMGame</span> SMGame registered and established under the laws of Curacao</p>
-								<div class="footer-icons">
-									<div class="licensed_logo">
-										<img src="./img/footer/gaming_curacao.png" alt="img_curacao" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-                </section>
-				
-				
-				<!---section3--->		
-				<section class="section main_section" id="section3">
-					<div class="intro">
-						<div class="img_about">
-							<img src="./img/bg/162.jpg" alt="about" />
-                        </div>
-                    </div>
-					<div class="black intro_about-info">
-						<div class="intro_about-info-wrap">
-							<div class="intro_about-info-wrapcontent">
-								<h3 class="company_name">SMGAME</h3>
-								<h5 class="company_name_desc">세계 최고의 벳레이더 데이터로 </h5>
-								<p class="company_name_desc_sub">업계에서 가장 정확하고 뛰어난 종합 북메이커 서비스 제공을 약속드립니다.</p>
-                            </div>
-                        </div>
-                    </div>
-					<div id="product_wrap" class="clearfix bg5">
-						<div class="row m-0 grey_bg">
-							<div class="col_card">
-								<div class="card_about">
-									<div class="card_about_inti">
-										<div class="img_about_1">
-											<img class="_img_" src="./img/about/about3.jpg" alt="about" />
-											<div class="text_des">
-												<i class="fi fi-ss-pencil-ruler"></i>
-												<p>#혁신적인 디자인</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-								
-								<div class="card_about">
-									<div class="card_about_inti">
-										<div class="img_about_1">
-											<img class="_img_" src="./img/about/about4.jpg" alt="about" />
-											<div class="text_des">
-												<i class="fi fi-ss-pencil-ruler"></i>
-												<p>#초고속 배당 업데이트</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-								
-								<div class="card_about">
-									<div class="card_about_inti">
-										<div class="img_about_1">
-											<img class="_img_" src="./img/about/about5.jpg" alt="about" />
-											<div class="text_des">
-												<i class="fi fi-ss-pencil-ruler"></i>
-												<p>#초고속 배당 업데이트</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-								
-								<div class="card_about">
-									<div class="card_about_inti">
-										<div class="img_about_1">
-											<img class="_img_" src="./img/about/about6.jpg" alt="about" />
-											<div class="text_des">
-												<i class="fi fi-ss-pencil-ruler"></i>
-												<p>#가격 대비 최고의 가치</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-								
-								<div class="card_about">
-									<div class="card_about_inti">
-										<div class="img_about_1">
-											<img class="_img_" src="./img/about/about7.jpg" alt="about" />
-											<div class="text_des">
-												<i class="fi fi-ss-pencil-ruler"></i>
-												<p>#기술</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-						
-						<div class="mission_container">
-							<div class="row_mission">
-								<h1 class="head_title_misson">
-									Our Mission
-                                </h1>
-								<div class="details_misson">
-									<p class="light_text">
-										저렴한 비용 대비 최고의 품질제공.<br>
-										혁신적인 플랫폼 기능 <br>
-										24시간 빠르고 정확한 CS서비스 및 파트너분들이 모두 만족할수 있는<br> 
-										<span class="color_text">최상의 서비스를</span> 약속드립니다.
-                                    </p>
-									
-									<p class="m_t_medium light_text">신뢰를 최우선적으로 하며 나날이 발전하는 "SMGAME" 이 되겠습니다.</p>
-                                </div>
-								
-								
-                            </div>
-                        </div>
-                    </div>
-					<footer class="footer-distributed">
-						<div class="footer_top">
-							<div class="box_left">
-								<i class="fi fi-ss-comment"></i>
-                            </div>
-							<div class="box_center">
-								<h2 class="title_contact m-bottom">Contact</h2>
-								<p class="subtitle_contact m-bottom">비즈니스 개발팀을 만나보세요</p>
-								<p class="sub_title_contact_ m-bottom">게임과 관련된 요구 사항, 비즈니스 또는 기타 모든 사항에 대해 자유롭게 질문하십시오.</p>
-                            </div>
-							<div class="box_right">
-								<ul class="box_right-content">
-									<li class="box_right-item">
-										<p class="box_right-item-p teleid">Telegram: @rchlrc</p>
-                                    </li>
-									<li class="box_right-item">
-										<a class="btn-outline cs_link telelink" href="https://t.me/rchlrc">
-											<p class="btn-text">지금 바로 문의</p>
-											<i class="fi fi-ss-arrow-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-						<div class="footer-bottom-wrap">
-							<div class="footer-bottom">
-								<div class="footer-left divider_vert">
-									<img src="./img/logo/SMGAME_SOLUTION.png" alt="logo" height="35px" />
-									<p class="footer-company-name">SMGame &copy; 2023</p>
-									<p class="about_company2">
-										유럽형 스포츠토토, 카지노솔루션<br />
-										분양 및 임대를 합리적인 가격에 제공합니다.
-                                    </p>
-                                </div>
-								<div class="footer-center divider_vert">
-									<div class="menu_footer_link">
-										<div class="menu_footer_link_group">
-											<p class="footer-links-title">Product</p>
-											<p class="footer-links">
-												<a href="#" tab="1">Sports Book</a>
-												
-												<a href="#" tab="3">Live Casino</a>
-												<a href="#" tab="4">Slots</a>
-												<a href="#" tab="5">Premium Games</a>
-                                            </p>
-                                        </div>
-										<div class="menu_footer_link_group">
-											<p class="footer-links-title">Packages</p>
-											<p data-menuanchor="page4" class="footer-links">
-												<a href="#page4" tab="1">Pricing</a>
-                                            </p>
-                                        </div>
-										<div class="menu_footer_link_group">
-											<p class="footer-links-title">Company</p>
-											<p data-menuanchor="page3" class="footer-links">
-												<a href="#page3" tab="1">About</a>
-                                            </p>
-                                        </div>
-                                    </div>
-									<div class="fi_wrap">
-										<i class="fi fi-brands-telegram"></i>
-										<p>
-											<a href="https://t.me/rchlrc" class="telelink teleid">Telegram: @rchlrc </a>
-                                        </p>
-                                    </div>
-                                </div>
-								<div class="footer-right divider_vert">
-									<p class="footer-company-about"><span>About the company</span> company registered and established under the laws of Curacao</p>
-									<div class="footer-icons">
-										<div class="licensed_logo">
-											<img src="./img/footer/gaming_curacao.png" alt="img_curacao" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-                </section>
 				
 				
 				

@@ -47,7 +47,11 @@ $(document).ready(function() {
         keyboard: true,
         simulateTouch: true,
         parallax: true,
-        effect: "slide",
+        effect: "fade",
+          direction: "vertical",
+          fadeEffect: {
+            crossFade: true  // Enables the crossfade effect between slides
+        },
         pagination: {
             el: ".swiper-slide-pagination",
             clickable: true

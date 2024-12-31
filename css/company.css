@@ -1093,8 +1093,10 @@ button.swiper-pagination-bullet {
 	position: absolute;
 	width: 8px;
 	left: 150px;
-	bottom: 148px;
+	/* bottom: 148px; */
 	z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -1845,7 +1847,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i , .nav_w
     border-radius: 25px;
 }
 .footer-distributed{
-	background-color: #000000;
+	background-color:transparent;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -1853,6 +1855,9 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i , .nav_w
 	font-family: roboto;
     font-weight: 300;
 	/* margin-top: 80px; */
+	position:sticky;
+	bottom:0;
+	width:100%;
 }
 .card .card-image i:before {vertical-align:middle;}
 .footer-distributed .footer-left,
@@ -1870,7 +1875,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i , .nav_w
 /* Footer left */
 
 .footer-distributed .footer-left{
-	width: 40%;
+	width: auto;
 }
 .footer-distributed .footer-left .about_company2 {
 	color:#ffffff;
@@ -1920,7 +1925,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i , .nav_w
 /* Footer Center */
 
 .footer-distributed .footer-center{
-	width: 35%;
+	width: auto;
 }
 
 .footer-distributed .footer-center i{
@@ -1982,7 +1987,8 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i , .nav_w
 /* Footer Right */
 
 .footer-distributed .footer-right{
-	width: 20%;
+	width: auto;
+	text-align:end;
 }
 
 .footer-distributed .footer-company-about{
@@ -2043,7 +2049,9 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i , .nav_w
 .footer_top, .footer-bottom-wrap {
     padding: 50px;
 }
+.footer-bottom-wrap  {
 
+}
 .footer_top  .box_right {
     display: inline-block;    vertical-align: top;
 }
@@ -2061,8 +2069,11 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i , .nav_w
 
 
 .footer-bottom-wrap .footer-bottom {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
 }
 
 
@@ -3368,4 +3379,15 @@ body.background-white .tf-mouse-inner {
 
 body.background-white .tf-mouse-outer {
     border-color: rgba(22, 22, 22, 1);
+}
+
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: 100% !important;  /* For horizontal swiper */
+    height: 100% !important; /* For vertical swiper */
 }
