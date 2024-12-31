@@ -1293,7 +1293,7 @@ button.swiper-pagination-bullet {
 	height: 100%;
 	left: 0;
 	top: 0;
-	background: #111;
+	background: #241440;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
@@ -1394,7 +1394,7 @@ button.swiper-pagination-bullet {
 }
 .maintitle-container-wrap {
     overflow: hidden;
-    max-width: 1450px;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -1710,6 +1710,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i , .nav_w
     margin-top: 120px;
 	overflow:auto;
 	font-family: roboto;
+	background-color: transparent !important;
 }
 
 .pp-section.pp-table {
