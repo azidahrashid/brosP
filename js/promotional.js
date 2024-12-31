@@ -42,7 +42,7 @@ $(document).ready(function() {
         init: true,
         loop: true,
         speed: 1200,
-        grabCursor: true,
+        grabCursor: false,
         mousewheel: true,
         keyboard: true,
         simulateTouch: true,
