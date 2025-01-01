@@ -16,18 +16,39 @@ $(document).ready(function() {
         afterRender: function(){
             $('#pp-nav').addClass('custom');
             $('.home_a').click(function () {
-                var targetId_ = $(this).data('target');  // Get the section ID from the data-target attribute
-    
-                if (targetId_) {
-                    // If data-target is present, scroll smoothly to the target section
-                    var targetSection = $(targetId_)[0];  // Get the corresponding section element
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-    
-                  
+                var targetData = $(this).data('target'); // Get the target from data-target attribute
+            
+                if (targetData) {
+                    // Find the section with the matching data-section attribute
+                    var targetSection = $(`[data-section="${targetData}"]`)[0];
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        console.error('Section not found for target:', targetData);
+                    }
                 } else {
-                    // Handle the case where data-target is not present, if needed
+                    console.error('data-target attribute is missing');
                 }
             });
+            
+            $('.about_a').click(function () {
+                var targetData = $(this).data('target'); // Get the target from data-target attribute
+            
+                if (targetData) {
+                    // Find the section with the matching data-section attribute
+                    var targetSection = $(`[data-section="${targetData}"]`)[0];
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        console.error('Section not found for target:', targetData);
+                    }
+                } else {
+                    console.error('data-target attribute is missing');
+                }
+            });
+            
         },
         afterLoad: function(anchorLink, index){
             if(index>1){
@@ -320,7 +341,7 @@ $indicator.width($activeItem.width());
 
 document.addEventListener("DOMContentLoaded", function () {
     // Reusable function to set up bullets and scroll interactions
-    function setupBulletNavigation(parentSelector, bulletContainerSelector) {
+    function setupBulletNavigation(parentSelector, bulletContainerSelector, navigationPrefix) {
         var parent = document.querySelector(parentSelector);
         var bulletContainer = document.querySelector(bulletContainerSelector);
         if (!parent || !bulletContainer) {
@@ -331,12 +352,15 @@ document.addEventListener("DOMContentLoaded", function () {
         var sections = parent.querySelectorAll('.section__');
         bulletContainer.innerHTML = ''; // Clear existing bullets if any
 
-        // Generate bullets dynamically
+        // Assign unique data attributes to sections and generate bullets dynamically
         sections.forEach((section, index) => {
+            var sectionData = `${navigationPrefix}_section${index + 1}`;
+            section.setAttribute('data-section', sectionData);
+
             var bullet = document.createElement('div');
             bullet.classList.add('bullet');
-            bullet.setAttribute('data-target', `#section__${index + 1}`);
-            bullet.setAttribute('aria-label', `Navigate to section__${index + 1}`);
+            bullet.setAttribute('data-target', sectionData);
+            bullet.setAttribute('aria-label', `Navigate to ${sectionData}`);
             bullet.setAttribute('role', 'button');
             bullet.setAttribute('tabindex', '0');
             bulletContainer.appendChild(bullet);
@@ -375,23 +399,28 @@ document.addEventListener("DOMContentLoaded", function () {
         // Single click event listener for bulletContainer
         bulletContainer.addEventListener('click', function (event) {
             if (event.target.classList.contains('bullet')) {
-                var targetId = event.target.getAttribute('data-target').replace('#', '');
-                var targetSection = document.getElementById(targetId);
+                var targetData = event.target.getAttribute('data-target');
+                var targetSection = parent.querySelector(`[data-section="${targetData}"]`);
 
                 if (targetSection) {
                     // Scroll to the section with smooth behavior
                     targetSection.scrollIntoView({ behavior: 'smooth' });
                 } else {
-                    console.error('Section not found:', targetId);
+                    console.error('Section not found:', targetData);
                 }
             }
         });
     }
 
-    // Call the function for multiple parent containers
-    setupBulletNavigation('#section1', '.bullet-navigation1');
-    setupBulletNavigation('#section3', '.bullet-navigation2');
+    // Setup navigation for multiple parents and containers
+    setupBulletNavigation('#section1', '.bullet-navigation1', 'nav1');
+    setupBulletNavigation('#section3', '.bullet-navigation2', 'nav2');
 });
+
+
+
+
+
 
 
 // Select elements
