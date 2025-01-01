@@ -15496,7 +15496,8 @@ body.image-generator-version {
     /* background-color: #42105e; */
     background-color: #241440;
     width: 100%;
-    z-index: 2
+    z-index: 2;
+
 }
 
 #app.radial-gradient {
@@ -16134,6 +16135,12 @@ body.image-generator-version {
 @media (min-width: 768px) {
     .blog--related-item-info .small--heading {
         margin-bottom:5px
+    }
+
+    #app {
+
+        height: calc(100vh - 100px);
+        overflow: auto;
     }
 }
 
@@ -20955,8 +20962,8 @@ body.image-generator-version {
 
 .av-section-4-after__pc-content {
     position: relative;
-    top: 50%;
-    transform: translateY(-50%)
+    /* top: 50%;
+    transform: translateY(-50%) */
 }
 
 @media (min-width: 1460px) {

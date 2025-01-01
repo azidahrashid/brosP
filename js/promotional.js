@@ -7,7 +7,7 @@ $(document).ready(function() {
           loopTop: true,
         menu: '#menu',
         anchors: ['page1', 'page2', 'page3', 'page4','page5','page6', 'page7', 'page8'],
-        sectionsColor: ['#000', '#000', '#000', '#000', '#000','#000','#000','#000'],
+        sectionsColor: ['#241440', '#241440', '#241440', '#241440', '#241440','#241440','#241440','#241440'],
         navigation:false,
         //navigation: {
             //'position': 'right',
@@ -15,6 +15,19 @@ $(document).ready(function() {
          //  },
         afterRender: function(){
             $('#pp-nav').addClass('custom');
+            $('.home_a').click(function () {
+                var targetId_ = $(this).data('target');  // Get the section ID from the data-target attribute
+    
+                if (targetId_) {
+                    // If data-target is present, scroll smoothly to the target section
+                    var targetSection = $(targetId_)[0];  // Get the corresponding section element
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+    
+                  
+                } else {
+                    // Handle the case where data-target is not present, if needed
+                }
+            });
         },
         afterLoad: function(anchorLink, index){
             if(index>1){
@@ -22,6 +35,10 @@ $(document).ready(function() {
             }else{
                 $('#pp-nav').addClass('custom');
             }
+
+
+ 
+            
         }
     });
 
@@ -143,11 +160,14 @@ $(".dropdown-button").dropdown({
 
  
 $('#menu a').click(function () {
+    
     $('#menu.active').removeClass('active');
     $('#menu a.active').removeClass('active');
 
     $(this).addClass('active');
     $(this).closest('ul').addClass('active');
+
+
 });
 
 
@@ -296,3 +316,99 @@ $indicator.width($activeItem.width());
 
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Reusable function to set up bullets and scroll interactions
+    function setupBulletNavigation(parentSelector, bulletContainerSelector) {
+        var parent = document.querySelector(parentSelector);
+        var bulletContainer = document.querySelector(bulletContainerSelector);
+        if (!parent || !bulletContainer) {
+            console.error('Parent or bullet container not found:', parentSelector, bulletContainerSelector);
+            return;
+        }
+
+        var sections = parent.querySelectorAll('.section__');
+        bulletContainer.innerHTML = ''; // Clear existing bullets if any
+
+        // Generate bullets dynamically
+        sections.forEach((section, index) => {
+            var bullet = document.createElement('div');
+            bullet.classList.add('bullet');
+            bullet.setAttribute('data-target', `#section__${index + 1}`);
+            bullet.setAttribute('aria-label', `Navigate to section__${index + 1}`);
+            bullet.setAttribute('role', 'button');
+            bullet.setAttribute('tabindex', '0');
+            bulletContainer.appendChild(bullet);
+        });
+
+        var bullets = bulletContainer.querySelectorAll('.bullet');
+        var controller = new ScrollMagic.Controller();
+
+        // Create ScrollMagic scenes
+        sections.forEach((section, index) => {
+            new ScrollMagic.Scene({
+                triggerElement: section,
+                triggerHook: 0.7,
+                duration: '80%',
+            })
+                .on('enter', function () {
+                    bullets.forEach(bullet => bullet.classList.remove('active'));
+                    bullets[index].classList.add('active');
+
+                    gsap.to(section, {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 1,
+                    });
+                })
+                .on('leave', function () {
+                    gsap.to(section, {
+                        opacity: 0,
+                        scale: 0.8,
+                        duration: 1,
+                    });
+                })
+                .addTo(controller);
+        });
+
+        // Single click event listener for bulletContainer
+        bulletContainer.addEventListener('click', function (event) {
+            if (event.target.classList.contains('bullet')) {
+                var targetId = event.target.getAttribute('data-target').replace('#', '');
+                var targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    // Scroll to the section with smooth behavior
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    console.error('Section not found:', targetId);
+                }
+            }
+        });
+    }
+
+    // Call the function for multiple parent containers
+    setupBulletNavigation('#section1', '.bullet-navigation1');
+    setupBulletNavigation('#section3', '.bullet-navigation2');
+});
+
+
+// Select elements
+const group = document.querySelector('.av-section-7__group');
+const wrap = document.querySelector('.av-section-7__wrap');
+
+// Function to check when scroll reaches translate(0px, 0px)
+function checkScrollPosition() {
+// Get the current transform value of the wrap element
+const transformValue = window.getComputedStyle(wrap).transform;
+
+// Check if translate(0px, 0px) is applied
+if (transformValue === 'matrix(1, 0, 0, 1, 0, 0)') {
+// Apply horizontal scroll transformation to the group
+group.style.transform = `translateX(${window.scrollY}px)`; // Adjust based on scroll position
+}
+}
+
+// Add scroll event listener to monitor scrolling
+window.addEventListener('scroll', checkScrollPosition);
