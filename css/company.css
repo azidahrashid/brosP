@@ -3398,3 +3398,34 @@ body.background-white .tf-mouse-outer {
 }
 
 
+.faq--item-sub-heading {
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 1rem;
+
+	border-radius: 4px;
+  }
+  .faq--item-sub-heading:hover {
+
+  }
+  .faq--item-sub-heading .ico {
+	transition: transform 0.3s ease;
+  }
+  .faq--item-sub-heading[aria-expanded="true"] .ico {
+	transform: rotate(180deg);
+  }
+  
+  .faq--item-answer {
+	padding: 1rem;
+
+
+	border-top: none;
+	display: none;
+  }
+  .faq--item-answer.show {
+	display: block;
+  }
+  
