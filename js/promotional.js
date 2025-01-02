@@ -415,7 +415,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Setup navigation for multiple parents and containers
     setupBulletNavigation('#section1', '.bullet-navigation1', 'nav1');
     setupBulletNavigation('#section3', '.bullet-navigation2', 'nav2');
-    setupBulletNavigation('#section5', '.bullet-navigation3', 'nav3');
+    setupBulletNavigation('#section4', '.bullet-navigation3', 'nav3');
 });
 
 
