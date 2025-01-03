@@ -3469,6 +3469,12 @@ body.background-white .tf-mouse-outer {
         left: auto;
         right: 0; /* Align submenu to the left for small screens */
 	}
+
+	.footer-distributed {
+		position:unset;
+	}
+
+
 }
 
 @media screen and (max-width:768px) {
