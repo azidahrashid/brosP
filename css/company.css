@@ -1489,7 +1489,7 @@ padding: 0 44px; }
 }
 
 .nav_wrapper .side-nav  .rtl-dir li>a {
-    font-size: 20px;
+    font-size: 30px;
 }
 .nav_wrapper .side-nav li>a:hover, .side-nav .rtl-dir .title_side a:hover ._home_ {
     color: #87b7dd;
@@ -1529,7 +1529,7 @@ padding: 0 44px; }
 
 .nav_wrapper .side-nav li>a {
     color: #9d88ab;   
-	margin: 0 10px;
+	margin: 0 ;
 	padding:0;
 	font-family: 'Impact';
 }
@@ -3205,6 +3205,7 @@ body.background-white .tf-mouse-outer {
 	nav .brand-logo {
 		left: 0;
 		transform: unset;
+		width: 150px;
 	}
 	.very_small_hamburger {
 		padding-top: 0;
@@ -3291,6 +3292,7 @@ body.background-white .tf-mouse-outer {
 	nav .brand-logo {
 		left: 0;
 		transform: unset;
+		width:150px;
 	}
 	
 	.container_products .tabs_content {
@@ -3400,6 +3402,7 @@ body.background-white .tf-mouse-outer {
 		margin: 0;
 	}
 }
+
 @media only screen and (max-width: 768px) {
 	.laravel-intro h2 {
 		font-size: 30px;
@@ -3500,21 +3503,25 @@ body.background-white .tf-mouse-outer {
 		min-height: 1131px;
 		height: auto;
 	}
-
 	.av-section-7 .mobile--slider .swiper-wrapper {
 		flex-direction: column;
 	}
-
-
+	.section--support-container .section--support-grid {
+		grid-template-columns: 45% 45%;
+		gap:10px;
+	}
 }
 
 @media only screen and (max-width: 640px) {
+	
 	.hero-heading._h1 {
 		font-size: 35px;
 	}
+
 	img.responsive-img, video.responsive-video {
 		max-height: 60px;
 		max-width: 85%;
+		height:auto;
 	}	
 }
 
