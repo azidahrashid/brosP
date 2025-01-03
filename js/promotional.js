@@ -6,8 +6,8 @@ $(document).ready(function() {
           direction: 'horizontal',
           loopTop: true,
         menu: '#menu',
-        anchors: ['page1', 'page2', 'page3', 'page4','page5','page6', 'page7', 'page8'],
-        sectionsColor: ['#241440', '#241440', '#241440', '#241440', '#241440','#241440','#241440','#241440'],
+        anchors: ['page1', 'page2', 'page3', 'page4','page5','page6', 'page7', 'page8' , 'page9' , 'page10' , 'page11'],
+        sectionsColor: ['#241440', '#241440', '#241440', '#241440', '#241440','#241440','#241440','#241440' , '#241440' , '#241440' , '#241440'],
         navigation:false,
         //navigation: {
             //'position': 'right',
