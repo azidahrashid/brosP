@@ -2338,28 +2338,28 @@
                     
                     
                     $(document).ready(function () {
-                        $('.item-sub-heading-link').on('click', function (event) {
-                            event.preventDefault(); // Prevent default anchor click behavior
-                            
-                            const targetId = $(this).attr('href'); // Get the target ID from the href attribute
-                            const $targetElement = $('.main_section ').find(targetId); // Locate the target element inside the scrollable container
-                            
-                            if ($targetElement.length) {
-                                // Calculate the scroll position to align the target element at the top (0) of the container
-                                const scrollPosition = 
-                                $targetElement.offset().top - $('.main_section ').offset().top + $('.main_section ').scrollTop();
-                                
-                                // Perform the scroll within the container
-                                $('.main_section ').animate({
-                                    scrollTop: scrollPosition
-                                }, 500); // Adjust scroll duration as needed
-                                console.log('Scroll Position:', scrollPosition);
-                            }
-                        });
-                        
-                        
-                        
-                    });
+    $('.item-sub-heading-link').on('click', function (event) {
+        event.preventDefault(); // Prevent default anchor click behavior
+        
+        const targetId = $(this).attr('href'); // Get the target ID from the href attribute
+        const $targetElement = $('.main_section').find(targetId); // Locate the target element inside .main_section
+        
+        if ($targetElement.length) {
+            // Calculate the scroll position
+            const scrollPosition = 
+                $targetElement.position().top + $('.main_section').scrollTop() - 120; // Subtract margin-top (if necessary)
+            
+            // Perform the scroll
+            $('.main_section').animate({
+                scrollTop: scrollPosition
+            }, 500); // Adjust scroll duration as needed
+            
+            console.log('Scroll Position:', scrollPosition);
+        }
+    });
+});
+
+
                     
           
                     
