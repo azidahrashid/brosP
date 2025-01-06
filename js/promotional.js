@@ -9,6 +9,7 @@ $(document).ready(function() {
         anchors: ['page1', 'page2', 'page3', 'page4','page5','page6', 'page7', 'page8' , 'page9' , 'page10' , 'page11' , 'page12' , 'page13' , 'page14' , 'page15'],
         sectionsColor: ['#241440', '#241440', '#241440', '#241440', '#241440','#241440','#241440','#241440' , '#241440' , '#241440' , '#241440' , '#241440' , '#241440' , '#241440' , '#241440'],
         navigation:false,
+        keyboardScrolling: false,
         //navigation: {
         //'position': 'right',
         // 'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
@@ -85,7 +86,7 @@ $(document).ready(function() {
         },
         pagination: {
             el: ".swiper-slide-pagination",
-            clickable: true
+            clickable: false
         },
         navigation: {
             nextEl: ".slide-next",
