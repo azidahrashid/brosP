@@ -23384,7 +23384,7 @@ form input.form-control:-webkit-autofill,form input.form-control:-webkit-autofil
 
 @media (min-width: 1460px) {
     .page--left-links .main--page {
-        padding-top:290px
+        padding-top:0
     }
 }
 
@@ -24792,8 +24792,8 @@ main {
     background-size: 100%;
     display: inline-block;
     height: 16px;
-    -webkit-mask-image: url(assets/images/star-rating.svg);
-    mask-image: url(assets/images/star-rating.svg);
+    /* -webkit-mask-image: url(assets/images/star-rating.svg);
+    mask-image: url(assets/images/star-rating.svg); */
     width: 16px
 }
 
