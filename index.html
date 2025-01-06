@@ -1690,32 +1690,7 @@
                             </div>
                         </section>
                     </div>
-                    <script>
-                        function toggleAccordion(header) {
-                            const targetId = header.getAttribute('data-target');
-                            const targetElement = document.querySelector(targetId);
-                            const isExpanded = header.getAttribute('aria-expanded') === 'true';
-                            
-                            // Close other accordions if needed
-                            document.querySelectorAll('.faq--item-sub-heading').forEach(item => {
-                                item.setAttribute('aria-expanded', 'false');
-                                const otherTarget = document.querySelector(item.getAttribute('data-target'));
-                                otherTarget.classList.remove('show');
-                                otherTarget.style.display = 'none';
-                            });
-                            
-                            // Toggle the clicked accordion
-                            header.setAttribute('aria-expanded', !isExpanded);
-                            if (isExpanded) {
-                                targetElement.classList.remove('show');
-                                targetElement.style.display = 'none';
-                                } else {
-                                targetElement.classList.add('show');
-                                targetElement.style.display = 'block';
-                            }
-                        }
-                        
-                    </script>
+  
                     
                 </section>
                 
@@ -2263,6 +2238,33 @@
                     
                     observer.observe(section7);
                     
+
+
+
+
+                    function toggleAccordion(header) {
+                        const $header = $(header);
+                        const targetId = $header.data('target');
+                        const $targetElement = $(targetId);
+                        const isExpanded = $header.attr('aria-expanded') === 'true';
+
+                        // Close other accordions if needed
+                        $('.faq--item-sub-heading').each(function () {
+                            const $item = $(this);
+                            $item.attr('aria-expanded', 'false');
+                            const otherTarget = $item.data('target');
+                            $(otherTarget).removeClass('show').hide();
+                        });
+
+                        // Toggle the clicked accordion
+                        $header.attr('aria-expanded', !isExpanded);
+                        if (isExpanded) {
+                            $targetElement.removeClass('show').hide();
+                        } else {
+                            $targetElement.addClass('show').show();
+                        }
+                    }
+
                 </script>
             </div>
         </body>

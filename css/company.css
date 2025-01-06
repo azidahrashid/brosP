@@ -3103,6 +3103,9 @@ body.background-white .tf-mouse-outer {
 	}
   }
   @media all and (min-width: 769px) {
+	#page-mobile-4-1, #page-mobile-4-2 {
+		display: none;
+	}
 	.tabs .tab a {
 	  font-size: 20px;
 	}
