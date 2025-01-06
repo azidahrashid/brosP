@@ -23402,7 +23402,7 @@ form input.form-control:-webkit-autofill,form input.form-control:-webkit-autofil
 
 @media (max-width: 767.98px) {
     .page--left-links .main--page {
-        padding-top:115px
+        /* padding-top:115px */
     }
 }
 
