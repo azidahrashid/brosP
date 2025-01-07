@@ -2346,8 +2346,7 @@
         
         if ($targetElement.length) {
             // Calculate the scroll position
-            const scrollPosition = 
-                $targetElement.position().top + $('.main_section').scrollTop() - 120; // Subtract margin-top (if necessary)
+            const scrollPosition = $targetElement.position().top - 140;// Subtract margin-top (if necessary)
             
             // Perform the scroll
             $('.main_section').animate({

@@ -16275,9 +16275,9 @@ form input.form-control:-webkit-autofill,form input.form-control:-webkit-autofil
 
 @media (min-width: 768px) {
     .page--left-links-left {
-        height:100vh;
+        height: calc(100vh - 130px);
         position: sticky;
-        top: 110px
+        top: 0;
     }
 
     .page--left-links-left div[data-simplebar=init] {
