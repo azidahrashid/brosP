@@ -4426,9 +4426,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 }
 
 @media (prefers-reduced-motion:reduce) {
-    .badge {
-        transition: none
-    }
+    .badge {transition: none}
 }
 
 a.badge:focus,a.badge:hover {
@@ -4461,24 +4459,15 @@ a.badge-primary:focus,a.badge-primary:hover {
 }
 
 a.badge-primary.focus,a.badge-primary:focus {
-    box-shadow: 0 0 0 .2rem rgba(52,144,220,.5);
-    outline: 0
+    box-shadow: 0 0 0 .2rem rgba(52,144,220,.5); outline: 0
 }
 
-.badge-secondary {
-    background-color: #6c757d;
-    color: #fff
-}
+.badge-secondary { background-color: #6c757d;color: #fff}
 
 a.badge-secondary:focus,a.badge-secondary:hover {
-    background-color: #545b62;
-    color: #fff
-}
+    background-color: #545b62; color: #fff}
 
-a.badge-secondary.focus,a.badge-secondary:focus {
-    box-shadow: 0 0 0 .2rem hsla(208,7%,46%,.5);
-    outline: 0
-}
+a.badge-secondary.focus,a.badge-secondary:focus { box-shadow: 0 0 0 .2rem hsla(208,7%,46%,.5);outline: 0}
 
 .badge-success {
     background-color: #38c172;
@@ -16360,7 +16349,7 @@ form input.form-control:-webkit-autofill,form input.form-control:-webkit-autofil
     font-weight: 700;
     line-height: 170%;
     text-transform: uppercase;
-    transition: color .4s ease-out
+    transition: color .4s ease-out;
 }
 
 @media (min-width: 1460px) {
