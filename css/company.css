@@ -38,7 +38,7 @@ html, body {
 
 body {
 	/* line-height: 1; */
-	background-color: #241440;
+	background-color: #000;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -1297,7 +1297,7 @@ button.swiper-pagination-bullet {
 	height: 100%;
 	left: 0;
 	top: 0;
-	background: #241440;
+	background: #000;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
@@ -1671,7 +1671,7 @@ stroke-dashoffset: -650px; }
 nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i , .nav_wrapper {    height: 120px;}
 .nav_wrapper {
     position: relative;
-    background-color: rgb(67 16 96 / 70%);
+    background-color:rgb(35 35 35 / 70%);
     height: 73px;
     margin-top: 30px;
 }
@@ -1741,7 +1741,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i , .nav_w
     margin-top: 120px;
 	overflow:auto;
 	font-family: roboto;
-	background-color: #241440 !important;
+	background-color: #000 !important;
 }
 
 .pp-section.pp-table {
@@ -3055,10 +3055,10 @@ body.background-white .tf-mouse-outer {
 	}
 	
 	.section__:nth-child(odd) {
-	background-color: #241440;
+	background-color: #000;
 	}
 	.section__:nth-child(even) {
-	background-color: #241440;
+	background-color: #000;
 	}
 	
 	/* Bullet container styling */

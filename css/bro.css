@@ -8350,14 +8350,14 @@ body.image-generator-version {
 
 #app {
     /* background-color: #42105e; */
-    background-color: #241440;
+    background-color: #000;
     width: 100%;
     z-index: 2;
 
 }
 
 #app.radial-gradient {
-    background: #241440
+    background: #333
 }
 
 #app.image-generator-version {
@@ -13555,7 +13555,7 @@ body.image-generator-version {
     .av-section-2__character {
         bottom:0;
         height: 92.5925925926%;
-        left: 0;
+        left: 15%;
         width: 52.0833333333%
     }
 }
@@ -18220,8 +18220,6 @@ footer,header {
     color: #d3d3d3!important
 }
 
-
-
 @media (min-width: 1460px) {
     .av-section-1 .coin--25 {
         height: 13.4259259259%;
@@ -18248,3 +18246,7 @@ footer,header {
         width: 10.6770833333%;
     }
 }
+
+
+
+
