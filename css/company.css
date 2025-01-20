@@ -1529,7 +1529,7 @@ padding: 0 44px; }
 }
 
 .nav_wrapper .side-nav li>a {
-    color: #9d88ab;   
+    color: #a1a1a1;   
 	margin: 0 ;
 	padding:0;
 	font-family: 'Impact';
@@ -3147,7 +3147,7 @@ body.background-white .tf-mouse-outer {
 	.side-nav .rtl-dir .title_side ._home_,
 	.side-nav li > a {
 	  font-size: 20px;
-	  color: #9d88ab;
+	  color: #a1a1a1;
 	}
 	.rtl-dir_center {
 	  justify-content: right;
