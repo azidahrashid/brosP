@@ -50,12 +50,95 @@ $(document).ready(function() {
             });
             
         },
-        afterLoad: function(anchorLink, index){
-            if(index>1){
+        afterLoad: function (anchorLink, index) {
+            if (index > 1) {
                 $('#pp-nav').removeClass('custom');
-                }else{
+            } else {
                 $('#pp-nav').addClass('custom');
-            }   
+            }
+    
+            // Find all sections
+            var $sections = $('.pp-section');
+
+            // Loop through all sections
+            $sections.each(function (sectionIndex) {
+                var $section = $(this);
+
+                if (sectionIndex === index - 1) {
+                    // Current section: add animation class
+                    $section.find('.animated.thisani').each(function () {
+                        var $element = $(this);
+                        $element.addClass('zoomInDown'); // Add animation class
+                    });
+                } else {
+                    // Other sections: remove animation class
+                    $section.find('.animated.thisani').each(function () {
+                        var $element = $(this);
+                        $element.removeClass('zoomInDown'); // Remove animation class
+                    });
+                }
+
+
+                if (sectionIndex === index - 1) {
+                    // Current section: add animation class
+                    $section.find('.animated.coin').each(function () {
+                        var $element = $(this);
+                        $element.addClass('rollIn'); // Add animation class
+                    });
+                } else {
+                    // Other sections: remove animation class
+                    $section.find('.animated.coin').each(function () {
+                        var $element = $(this);
+                        $element.removeClass('rollIn'); // Remove animation class
+                    });
+                }
+
+                if (sectionIndex === index - 1) {
+                    $section.find('.animted.av-section-1__big-image').each(function(){
+                        var $element = $(this);
+                        $element.addClass('rollIn');
+                    });
+                } else {
+                    $section.find('.animated.av-section-1__big-image').each(function(){
+                        var $element = $(this);
+                        $element.removeClass('rollIn');
+                    });
+                }
+
+
+                if (sectionIndex === index - 1) {
+                    // Current section: add animation class
+                    $section.find('.animated.av-section-1__big-logo').each(function () {
+                        var $element = $(this);
+                        $element.addClass('slideInDown'); // Add animation class
+                    });
+                } else {
+                    // Other sections: remove animation class
+                    $section.find('.animated.av-section-1__big-logo').each(function () {
+                        var $element = $(this);
+                        $element.removeClass('slideInDown'); // Remove animation class
+                    });
+                }
+
+
+                if (sectionIndex === index - 1) {
+                    // Current section: add animation class
+                    $section.find('.animated.about--av-section-1__big-logo').each(function () {
+                        var $element = $(this);
+                        $element.addClass('slideInDown'); // Add animation class
+                    });
+                } else {
+                    // Other sections: remove animation class
+                    $section.find('.animated.about--av-section-1__big-logo').each(function () {
+                        var $element = $(this);
+                        $element.removeClass('slideInDown'); // Remove animation class
+                    });
+                }
+                
+                
+
+
+            });
         }
     });
     $.fn.pagepiling.setAllowScrolling(false);

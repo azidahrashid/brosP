@@ -2073,3 +2073,25 @@ http://ourownthing.co.uk/gradpad.html#
   margin: 0;
 }
 
+/* Staggered animation delays using delay-{time} classes */
+.delay-0-1 {
+  animation-delay: 0.1s;
+}
+.delay-0-2 {
+  animation-delay: 0.2s;
+}
+.delay-0-3 {
+  animation-delay: 0.3s;
+}
+.delay-0-4 {
+  animation-delay: 0.4s;
+}
+.delay-0-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-0-7 {animation-delay: 0.7s;}
+.delay-0-8 {animation-delay: 0.8s;}
+.delay-0-9 {animation-delay: 0.9s;}
+.delay-1 {animation-delay: 1s;}
+.delay-1-2 {animation-delay: 1.2s;}

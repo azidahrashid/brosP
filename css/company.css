@@ -3569,3 +3569,39 @@ body.background-white .tf-mouse-outer {
 	  height: auto;
 	}
   }
+
+
+  .thisani , .coin.animated , .av-section-1__big-image {
+	opacity:0;
+  }
+
+  .thisani.zoomInDown {opacity:1}
+  .coin.animated.rollIn {opacity:1}
+  .av-section-1__big-logo.slideInDown , .about--av-section-1__big-logo.slideInDown , .animated.av-section-1__big-image{opacity:1}
+
+
+  .main_section::-webkit-scrollbar {
+	width: 1em;
+  }
+   
+  .main_section::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgb(78 78 78 / 0%);
+  }
+   
+  .main_section::-webkit-scrollbar-thumb {
+	background-color: #000000;
+  
+  }
+
+  #app::-webkit-scrollbar {
+	width: 1em;
+  }
+   
+  #app::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgb(78 78 78 / 0%);
+  }
+   
+  #app::-webkit-scrollbar-thumb {
+	background-color: #000000;
+  
+  }
